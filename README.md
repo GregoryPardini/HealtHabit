@@ -21,15 +21,22 @@ I dati dell'applicazione vengono raccolti in modo anonimo e vengono presentati i
 ## Features
   * Supportata dai component del framework [Ionic](https://ionicframework.com/),  l'app si presenta con un'interfaccia facile ed intuitiva, adatta ad ogni età.
   * L'applicazioni si predispone inoltre per essere integrata con l'APP IO, essendo creata con la stessa tecnologia, ed con il portale MioDottore.it per prenotare in modo facile e veloce gli esami consigliati dall'applicazione.
-  * Dashboard che aggrega i dati generati dagli utenti e ne permette la consultazione per fini statistici 
+  * Dashboard che aggrega i dati generati dagli utenti e ne permette la consultazione per fini statistici a chi detiene la proprietà del dato.
+
+
+# WorkFlow
+Per garantire una demo dell'usabilità dell'applicazione, sono stati generati dati artificiali che simulano gli inserimenti da parte di utenti immaginari.
+I dati sono stati generati secondo delle logiche e i valori assegnati alle variabili seguono delle precise condizioni, esposte nel file Excel "albero_variabili" nella cartella assets. Le logiche usate per generare i dati sono state estrapolate da fonti ufficiali, quali Ministero della Salute, Fondazione Umberto Veronesi.
+I dati generati sono stati poi immessi in Cloud Firestore, un database di Google cloud, di tipologia NoSQL, flessibile e scalabile per archiviare e sincronizzare i dati per lo sviluppo lato client e lato server.
+E' stata inoltre inizializzata unna libreria python (HealtHapy) che in futuro potrà contenere moduli e funzioni utili per il calcolo degli indicatori a partire dal database, costantemente aggiornato grazie alle azioni degli utenti.
+
 
 # Stack tecnologico
   * **App Mobile**: Ionic React Framework
-  * **Backend**: Firebase
+  * **Data Lake**: Firebase
   * **Dashboard**: Tableau Public
   * **Code**: Python, Typescript
   * **Project Management**: Trello
-
 
 # Team
  * *Gregory Pardini*: Frontend App Developer
