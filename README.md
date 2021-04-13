@@ -11,7 +11,7 @@
  3. [Presentazione Powerpoint](https://github.com/gerti98/HealtHabit/blob/master/Healthabit.pdf)
 
 # Descrizione
-A causa dell'emergenza sanitaria causata dal Covid-19, a partire da Marzo 2020, molti pazienti sono rimasti indietro nei percorsi di cura cura diagnostici terapeutici, nelle nuove diagnosi, nelle visite di follow-up o negli esami di routine. Ad aggravare la situazione, inoltre, c'è la totale mancanza di dati che impedisce di poter quantificare il danno di salute provocato ai cittadini che non hanno potuto sottoporsi a tali servizi
+A causa dell'emergenza sanitaria causata dal Covid-19, a partire da Marzo 2020, molti pazienti sono rimasti indietro nei percorsi di cura diagnostici terapeutici, nelle nuove diagnosi, nelle visite di follow-up o negli esami di routine. Ad aggravare la situazione, inoltre, c'è la totale mancanza di dati che impedisce di poter quantificare il danno di salute provocato ai cittadini che non hanno potuto sottoporsi a tali servizi
 
 Il progetto *HealtHabit* si prefigge l'obiettivo di aiutare l'utente a tenere traccia di tutti gli esami che deve eseguire durante l'anno. Tramite un'app sviluppata ad-hoc e **già funzionante**, l'utente è invitato a compilare vari sondaggi relativi ad esami di routine o allo stile di vita in modo tale da dare consigli mirati riguardo possibili visite da effettuare.
 
