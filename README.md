@@ -28,7 +28,7 @@ I dati dell'applicazione vengono raccolti in modo anonimo e vengono presentati i
 Per garantire una demo dell'usabilità dell'applicazione, sono stati generati dati artificiali che simulano gli inserimenti da parte di utenti immaginari.
 I dati sono stati generati secondo delle logiche e i valori assegnati alle variabili seguono delle precise condizioni, esposte nel file Excel "albero_variabili" nella cartella assets. Le logiche usate per generare i dati sono state estrapolate da fonti ufficiali, quali Ministero della Salute, Fondazione Umberto Veronesi.
 I dati generati sono stati poi immessi in Cloud Firestore, un database di Google cloud, di tipologia NoSQL, flessibile e scalabile per archiviare e sincronizzare i dati per lo sviluppo lato client e lato server.
-E' stata inoltre inizializzata unna libreria python (HealtHapy) che in futuro potrà contenere moduli e funzioni utili per il calcolo degli indicatori a partire dal database, costantemente aggiornato grazie alle azioni degli utenti.
+E' stata inoltre inizializzata una libreria python (HealtHapy) che in futuro potrà contenere moduli e funzioni utili per il calcolo degli indicatori a partire dal database, costantemente aggiornato grazie alle azioni degli utenti.
 
 
 # Stack tecnologico
