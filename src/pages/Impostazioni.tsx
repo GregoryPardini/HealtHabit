@@ -17,6 +17,7 @@ import {
   import { Plugins } from "@capacitor/core";
   import React from "react";
 import Notifiche from "../components/Notifiche";
+import { useHistory } from "react-router";
   const { Storage } = Plugins;
   
   const Impostazioni: React.FC = () => { 
@@ -24,8 +25,13 @@ import Notifiche from "../components/Notifiche";
       const ret = await Storage.get({ key: "user" });
       console.log(ret);
     };
+    const history = useHistory()
   
     data();
+    function veloce(){
+      Notifiche.schedule();
+      history.push("/login");
+    }
   
     return (
       <IonPage>
@@ -43,7 +49,7 @@ import Notifiche from "../components/Notifiche";
         >
           SVUOTA LOCAL STORAGE
         </IonButton>
-        <IonButton expand="block" onClick={() => Notifiche.schedule()}>Notifiche</IonButton>
+        <IonButton expand="block" onClick={() => veloce()}>Notifiche</IonButton>
         </IonContent>
         
          

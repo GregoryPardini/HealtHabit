@@ -47,14 +47,18 @@ interface objVisita {
 const ListaVisite: React.FC = () => {
   const [visiteFatte, setVisiteFatte] = useState([]);
   const [visiteNonFatte, setVisiteNonFatte] = useState([{} as objVisita]);
+  useEffect(()=>{
+      console.log(visiteNonFatte)
+  })
   const [visitePrenotate, setVisitePrenotate] = useState([{} as objVisita]);
   const [visiteNonPrenotate, setVisiteNonPrenotate] = useState([
     {} as objVisita,
   ]);
 
   useIonViewWillEnter(() => {
+
     db.collection("visite")
-      .doc("Giovanni")
+      .doc("gegorypardini.private@gmail.com" ) //demo, sessionStorage.getItem("mail")
       .collection("visite")
       .orderBy("Data", "asc")
       .get()
@@ -69,15 +73,15 @@ const ListaVisite: React.FC = () => {
           console.log(doc);
           let item = doc.data();
           let timestamp = Date.now();
-
+            console.log(timestamp)
           if (item.Prenotata == false && item.Eseguita == false) {
             temp_nonPrenotate.push(item);
           } else if (item.Prenotata == true && item.Eseguita == true) {
             temp_fatte.push(item);
           } else if (item.Prenotata == true && item.Eseguita == false) {
-            if (item.Data > timestamp) {
-              temp_Prenotate.push(item);
-            } else {
+             if (item.Data > timestamp) {
+               temp_Prenotate.push(item);
+             } else {
               temp_nonFatte.push(item);
             }
           }
@@ -113,9 +117,7 @@ const ListaVisite: React.FC = () => {
                 <IonLabel>
                   <h2 className="white_text">{item.Nome}</h2>
                   <h3>{item.Prenotata}</h3>
-                  <h4 className="white_text">
-                    Luogo: {item.Luogo} - Data: {item.Data}
-                  </h4>
+               
                 </IonLabel>
               </IonItem>
               <IonItemOptions side="end">
@@ -139,8 +141,8 @@ const ListaVisite: React.FC = () => {
         </IonListHeader>
         {visitePrenotate.map((item: objVisita) => {
           return (
-            <IonItemSliding>
-            <IonItem lines="none" key={item.Luogo + item.Data + item.Nome}>
+            
+            <IonItem className="background-green-item" lines="none" key={item.Luogo + item.Data + item.Nome}>
               <IonAvatar slot="start">
                 <img
                   className="no-radius"
@@ -155,17 +157,9 @@ const ListaVisite: React.FC = () => {
                 </h4>
               </IonLabel>
             </IonItem>
-            <IonItemOptions side="end">
-            <IonItemOption
-              color="danger"
-              className="IonItemsPrincipalOptionFirst"
-              onClick={() => alert("pressed non mi piace")}
-              style={{marginRight: "1em"}}
-            >
-              Segnala
-            </IonItemOption>
-          </IonItemOptions>
-        </IonItemSliding>
+          
+         
+      
           );
         })}
       </IonList>
@@ -176,8 +170,8 @@ const ListaVisite: React.FC = () => {
         </IonListHeader>
         {visiteNonFatte.map((item: objVisita) => {
           return (
-            <IonItemSliding>
-            <IonItem lines="none" key={item.Luogo + item.Data + item.Nome}>
+            
+            <IonItem className="background-green-item" lines="none" key={item.Luogo + item.Data + item.Nome}>
               <IonAvatar slot="start">
                 <img
                   className="no-radius"
@@ -192,17 +186,6 @@ const ListaVisite: React.FC = () => {
                 </h4>
               </IonLabel>
             </IonItem>
-            <IonItemOptions side="end">
-            <IonItemOption
-              color="danger"
-              className="IonItemsPrincipalOptionFirst"
-              onClick={() => alert("pressed non mi piace")}
-              style={{marginRight: "1em"}}
-            >
-              Segnala
-            </IonItemOption>
-          </IonItemOptions>
-        </IonItemSliding>
           );
         })}
       </IonList>
@@ -213,8 +196,8 @@ const ListaVisite: React.FC = () => {
         </IonListHeader>
         {visiteFatte.map((item: objVisita) => {
           return (
-            <IonItemSliding>
-            <IonItem lines="none" key={item.Luogo + item.Data + item.Nome}>
+            
+            <IonItem  className="background-green-item" lines="none" key={item.Luogo + item.Data + item.Nome}>
               <IonAvatar slot="start">
                 <img
                   className="no-radius"
@@ -229,17 +212,7 @@ const ListaVisite: React.FC = () => {
                 </h4>
               </IonLabel>
             </IonItem>
-            <IonItemOptions side="end">
-            <IonItemOption
-              color="danger"
-              className="IonItemsPrincipalOptionFirst"
-              onClick={() => alert("pressed non mi piace")}
-              style={{marginRight: "1em"}}
-            >
-              Segnala
-            </IonItemOption>
-          </IonItemOptions>
-        </IonItemSliding>
+    
           );
         })}
       </IonList>

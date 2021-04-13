@@ -41,10 +41,10 @@ const Login: React.FC = () => {
                 </IonCol>
               </IonRow>
               <IonRow>
-                <IonCol>Pagina 1</IonCol>
+                <IonCol>Aiutiamo i Medici di tutta Italia</IonCol>
               </IonRow>
               <IonRow>
-                <IonCol>Bella descrizione</IonCol>
+                <IonCol>Compilando i questionari, aiuterai i medici a vedere il tuo storico</IonCol>
               </IonRow>
             </IonGrid>
           </IonSlide>
@@ -56,10 +56,10 @@ const Login: React.FC = () => {
                 </IonCol>
               </IonRow>
               <IonRow>
-                <IonCol>Domandona</IonCol>
+                <IonCol>Covid 19</IonCol>
               </IonRow>
               <IonRow>
-                <IonCol>Domandina</IonCol>
+                <IonCol>Se hai sintomi influenzali, stai a casa</IonCol>
               </IonRow>
             </IonGrid>
           </IonSlide>
@@ -71,10 +71,10 @@ const Login: React.FC = () => {
                 </IonCol>
               </IonRow>
               <IonRow>
-                <IonCol>Domandona</IonCol>
+                <IonCol>Vaccini</IonCol>
               </IonRow>
               <IonRow>
-                <IonCol>Domandina</IonCol>
+                <IonCol>Da oggi puoi prenotare il tuo vaccino!</IonCol>
               </IonRow>
             </IonGrid>
           </IonSlide>
